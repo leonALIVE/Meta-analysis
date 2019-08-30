@@ -2,12 +2,17 @@
 # datasets and examples from Schwarzer, Carpenter, Rucker
 # https://www.imbi.uni-freiburg.de/lehre/lehrbuecher/meta-analysis-with-r
 
+# you need to download the datasets from the imbi.uni-freiburg website or from this GIT repos in order to run the script below
+# These are the datasets that accompany the book: Meta-analysis with R by Schwarzer, Carpenter, Rucker 
+# This script is also compiled from various scripts that accompany the book 
+
 
 # install.packages("meta")
 library(meta)
 help(meta)
 
-setwd("C:/Users/Leon.alive/Dropbox/R/Meta-analysis with R/example_data")
+getwd()
+setwd("C:/Users/Leon.alive/Dropbox/R/Meta-analysis with R/example_data") # depending on where you stored your datasets
 
 data1 <- read.csv("dataset01.csv", as.is=TRUE)
 

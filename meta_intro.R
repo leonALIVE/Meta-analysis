@@ -3,13 +3,14 @@
 # https://www.imbi.uni-freiburg.de/lehre/lehrbuecher/meta-analysis-with-r
 
 # you need to download the datasets from the imbi.uni-freiburg website or from this GIT repos in order to run the script below
-# These are the datasets that accompany the book: Meta-analysis with R by Schwarzer, Carpenter, Rucker 
+# dataset01, dataset03, dataset07, dataset07
+# These are datasets that accompany the book: Meta-analysis with R by Schwarzer, Carpenter, Rucker 
 # This script is also compiled from various scripts that accompany the book 
 
 
 # install.packages("meta")
 library(meta)
-help(meta)
+help(meta) # see all the components of the package; it also speaks with "metafor" package
 
 getwd()
 setwd("C:/Users/Leon.alive/Dropbox/R/Meta-analysis with R/example_data") # depending on where you stored your datasets
@@ -21,7 +22,7 @@ View(data1)
 
 # choose function to match dataset and type of MA
 # specify colums, data, and labels
-mc1 <- metacont(Ne, Me, Se, Nc, Mc, Sc,
+mc1 <- metacont(Ne, Me, Se, Nc, Mc, Sc,  # the order matters if you don't specify the argument 
                 data=data1,
                 studlab=paste(author, year))
 
